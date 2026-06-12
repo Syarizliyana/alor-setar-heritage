@@ -14,8 +14,8 @@ export default defineConfig({
 
       manifest: {
         id: '/',
-        name: 'Jejak Warisan Alor Setar',
-        short_name: 'Jejak Warisan',
+        name: 'Jejak Diraja Alor Setar',
+        short_name: 'Jejak Diraja',
         description: 'Terokai Warisan Kedah Melalui AR',
         theme_color: '#92400e',
         background_color: '#92400e',
