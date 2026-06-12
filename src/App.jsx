@@ -811,7 +811,7 @@ const playError = () => {
   };
 
   return (
-    <div className="w-full h-screen bg-gray-900 flex justify-center items-center font-sans overflow-hidden relative">
+    <div className="w-full h-[100dvh] bg-gray-900 flex justify-center items-center font-sans relative">
       {toastMsg.text && (
         <div className="absolute top-8 left-1/2 transform -translate-x-1/2 z-[2000] w-[90%] max-w-[350px] animate-[bounce_0.5s_ease-out]">
           <div className={`${toastMsg.type === 'error' ? 'bg-red-500' : 'bg-amber-500'} text-white px-5 py-3 rounded-2xl shadow-2xl text-center text-sm font-bold border-2 border-white flex items-center justify-center gap-2`}>
@@ -821,7 +821,7 @@ const playError = () => {
         </div>
       )}
 
-      <div className="w-full max-w-[400px] h-full sm:h-[850px] sm:max-h-[90vh] bg-white relative flex flex-col shadow-[0_0_50px_rgba(0,0,0,0.3)] sm:rounded-[2.5rem] overflow-hidden sm:border-[12px] sm:border-gray-800">
+      <div className="w-full max-w-[400px] h-full sm:h-[850px] sm:max-h-[90vh] bg-white relative flex flex-col shadow-[0_0_50px_rgba(0,0,0,0.3)] sm:rounded-[2.5rem] sm:border-[12px] sm:border-gray-800">
         <div className="hidden sm:block absolute top-0 left-1/2 transform -translate-x-1/2 w-[120px] h-[24px] bg-gray-800 rounded-b-3xl z-[1000]"></div>
 
         {showSplash && (
@@ -880,21 +880,21 @@ const playError = () => {
         </div>
 
         {(view === 'map' || view === 'inventory') && (
-          <div className="absolute bottom-0 w-full h-[100px] bg-white/95 backdrop-blur-xl border-t border-gray-100 flex justify-around items-center px-8 z-[500] pb-6 rounded-b-[2.5rem]">
+          <div className="absolute bottom-0 w-full h-[110px] bg-white/95 backdrop-blur-xl border-t border-gray-100 flex justify-around items-center px-8 z-[500] rounded-b-[2.5rem] pb-2">
             <button onClick={() => {
              playClick();
              setView('map');
-             }} className={`flex flex-col items-center p-2 w-16 transition-all duration-300 ${view === 'map' ? 'text-amber-600 -translate-y-2' : 'text-gray-400 hover:text-gray-600'}`}>
+             }} className={`flex flex-col items-center justify-center p-2 w-20 transition-all duration-300 ${view === 'map' ? 'text-amber-600 -translate-y-2' : 'text-gray-400 hover:text-gray-600'}`}>
               <div className={`p-2 rounded-2xl ${view === 'map' ? 'bg-amber-50' : ''}`}><MapPin size={26} strokeWidth={view === 'map' ? 2.5 : 2} /></div>
               <span className={`text-[10px] mt-1 ${view === 'map' ? 'font-black' : 'font-medium'}`}>Jelajah</span>
             </button>
-            <div className="w-14 h-14 bg-gradient-to-tr from-amber-500 to-amber-400 rounded-full flex items-center justify-center shadow-lg -mt-6 border-4 border-white transform hover:scale-105 transition-transform cursor-pointer">
+            <div className="w-14 h-14 bg-gradient-to-tr from-amber-500 to-amber-400 rounded-full flex items-center justify-center shadow-lg border-4 border-white transform hover:scale-105 transition-transform cursor-pointer">
                <Camera size={24} className="text-white" />
             </div>
             <button onClick={() => {
              playClick();
              setView('inventory');
-             }} className={`flex flex-col items-center p-2 w-16 transition-all duration-300 relative ${view === 'inventory' ? 'text-amber-600 -translate-y-2' : 'text-gray-400 hover:text-gray-600'}`}>
+             }} className={`flex flex-col items-center justify-center p-2 w-20 transition-all duration-300 relative ${view === 'inventory' ? 'text-amber-600 -translate-y-2' : 'text-gray-400 hover:text-gray-600'}`}>
               <div className={`p-2 rounded-2xl ${view === 'inventory' ? 'bg-amber-50' : ''}`}><Backpack size={26} strokeWidth={view === 'inventory' ? 2.5 : 2} /></div>
               <span className={`text-[10px] mt-1 ${view === 'inventory' ? 'font-black' : 'font-medium'}`}>Inventori</span>
               {inventory.length > 0 && (
