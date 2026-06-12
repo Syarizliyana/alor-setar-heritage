@@ -13,6 +13,7 @@ export default defineConfig({
       includeAssets: ['favicon.svg'],
 
       manifest: {
+        id: '/',
         name: 'Alor Setar Heritage Trail',
         short_name: 'Heritage Trail',
         description: 'Explore Kedah Heritage Through AR',
