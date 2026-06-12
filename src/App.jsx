@@ -329,7 +329,7 @@ const MapScreen = ({ playerLoc, setPlayerLoc, onEnterAR, inventory, isRealGPS, s
          <span class="text-xl">👩</span>
       </div>
 
-      <div class="absolute -bottom-1.5 w-4 h-4 bg-amber-700 rotate-45 rounded-sm z-0"></div>
+      <div class="absolute -bottom-1.5 w-4 h-4 bg-blue-600 rotate-45 rounded-sm z-0"></div>
     </div>
   `,
   className: '',
@@ -861,7 +861,7 @@ const playError = () => {
   </div>
 </div>
 
-<div className="absolute bottom-8 w-full flex justify-center z-10">
+<div className="absolute bottom-16 w-full flex justify-center z-10 px-4">
   <p className="text-[#F5E6CC] text-sm font-medium tracking-wide">
     Terokai Warisan Kedah Melalui AR
   </p>
@@ -880,7 +880,7 @@ const playError = () => {
         </div>
 
         {(view === 'map' || view === 'inventory') && (
-          <div className="absolute bottom-0 w-full h-[85px] bg-white/95 backdrop-blur-xl border-t border-gray-100 flex justify-around items-center px-8 z-[500] pb-4 rounded-b-[2.5rem]">
+          <div className="absolute bottom-0 w-full h-[100px] bg-white/95 backdrop-blur-xl border-t border-gray-100 flex justify-around items-center px-8 z-[500] pb-6 rounded-b-[2.5rem]">
             <button onClick={() => {
              playClick();
              setView('map');
@@ -888,7 +888,7 @@ const playError = () => {
               <div className={`p-2 rounded-2xl ${view === 'map' ? 'bg-amber-50' : ''}`}><MapPin size={26} strokeWidth={view === 'map' ? 2.5 : 2} /></div>
               <span className={`text-[10px] mt-1 ${view === 'map' ? 'font-black' : 'font-medium'}`}>Jelajah</span>
             </button>
-            <div className="w-14 h-14 bg-gradient-to-tr from-amber-500 to-amber-400 rounded-full flex items-center justify-center shadow-lg -mt-8 border-4 border-white transform hover:scale-105 transition-transform cursor-pointer">
+            <div className="w-14 h-14 bg-gradient-to-tr from-amber-500 to-amber-400 rounded-full flex items-center justify-center shadow-lg -mt-6 border-4 border-white transform hover:scale-105 transition-transform cursor-pointer">
                <Camera size={24} className="text-white" />
             </div>
             <button onClick={() => {
