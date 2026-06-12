@@ -14,11 +14,11 @@ export default defineConfig({
 
       manifest: {
         id: '/',
-        name: 'Alor Setar Heritage Trail',
-        short_name: 'Heritage Trail',
-        description: 'Explore Kedah Heritage Through AR',
-        theme_color: '#0f766e',
-        background_color: '#0f766e',
+        name: 'Jejak Warisan Alor Setar',
+        short_name: 'Jejak Warisan',
+        description: 'Terokai Warisan Kedah Melalui AR',
+        theme_color: '#92400e',
+        background_color: '#92400e',
         display: 'standalone',
         orientation: 'portrait',
         scope: '/',
